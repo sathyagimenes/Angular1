@@ -1,0 +1,39 @@
+<!-- Navbar -->
+<app-header></app-header>
+<!-- End Navbar -->
+
+<!-- Main -->
+<main id="main">
+  <!-- Carousel -->
+  <app-carrossel></app-carrossel>
+  <!-- End Carousel -->
+
+  <!-- Features -->
+  <app-destaques [featureData]="data.features"></app-destaques>
+  <!-- End Features -->
+
+  <!-- About -->
+  <app-sobre [aboutData]="data.about"></app-sobre>
+  <!-- End About -->
+
+  <!-- Address -->
+  <app-address [addressData]="data.address"></app-address>
+  <!-- End Address -->
+
+  <!-- Contact -->
+  <app-contatos></app-contatos>
+  <!-- End Contact -->
+
+  <div class="btn-top">
+    <a class="btn btn-link" href="#main">
+      <img src="./assets/images/seta-para-cima.png" alt="...">
+    </a>
+  </div>
+
+</main>
+<!-- End Main -->
+
+<!-- Footer -->
+<app-footer></app-footer>
+<!-- End Footer -->
+<script src="./assets/bootstrap/js/bootstrap.min.js"></script>

@@ -13,7 +13,7 @@
   <!-- End Features -->
 
   <!-- About -->
-  <app-sobre [aboutData]="data.about"></app-sobre>
+  <app-sobre [aboutData]="data.about" (elementCreated)="onElementCreated($event)"></app-sobre>
   <!-- End About -->
 
   <!-- Address -->
@@ -21,7 +21,7 @@
   <!-- End Address -->
 
   <!-- Contact -->
-  <app-contatos></app-contatos>
+  <app-contatos (sendForm)="onContactFormSubmitted($event)"></app-contatos>
   <!-- End Contact -->
 
   <div class="btn-top">

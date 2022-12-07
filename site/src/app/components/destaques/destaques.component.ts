@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { FeaturesSectionData } from 'src/app/models/features-section-data.model';
 
 @Component({
@@ -7,7 +7,11 @@ import { FeaturesSectionData } from 'src/app/models/features-section-data.model'
   styleUrls: ['./destaques.component.css']
 })
 export class DestaquesComponent {
-
+  @Output() public elementFeaturesCreated: EventEmitter<string> = new EventEmitter<string>();
   @Input() public featureData!: FeaturesSectionData;
+
+  ngOnInit() {
+    this.elementFeaturesCreated.emit('features');
+  }
 
 }

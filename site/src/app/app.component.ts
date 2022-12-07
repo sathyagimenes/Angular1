@@ -54,7 +54,32 @@ export class AppComponent {
     console.log('Elemento criado:', element);
   }
 
-  onContactFormSubmitted(formData: FormsData): void {
-    console.log("Formulário enviado com sucesso!", formData);
+  onElementAddressCreated(element: string): void {
+    console.log('Elemento criado:', element);
   }
+
+  onElementCarouselCreated(element: string): void {
+    console.log('Elemento criado:', element)
+  }
+
+  onElementHeaderCreated(element: string): void {
+    console.log('Elemento criado:', element);
+  }
+
+  onElementContactCreated(element: string): void {
+    console.log('Elemento criado:', element);
+  }
+
+  onElementFeaturesCreated(element: string): void {
+    console.log('Elemento criado:', element);
+  }
+
+  onElementFooterCreated(element: string): void {
+    console.log('Elemento criado:', element);
+  }
+
+  onContactFormSubmitted(formData: FormsData): void {
+    console.log('Formulário enviado com sucesso!', formData);
+  }
+
 }

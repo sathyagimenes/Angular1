@@ -8,6 +8,7 @@ import { FormsData } from 'src/app/models/forms-data.model';
 })
 export class ContatosComponent {
   @Output() public sendForm: EventEmitter<FormsData> = new EventEmitter<FormsData>();
+  @Output() public elementContactCreated: EventEmitter<string> = new EventEmitter<string>();
 
   public btnDisabled = true;
 
@@ -15,6 +16,7 @@ export class ContatosComponent {
     setTimeout(() => {
       this.btnDisabled = false;
     }, 5000);
+    this.elementContactCreated.emit('contact');
   }
 
   public submitForm(): void {

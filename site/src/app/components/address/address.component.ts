@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { AddressSectionData } from 'src/app/models/address-section-data.model';
 
 @Component({
@@ -9,5 +9,9 @@ import { AddressSectionData } from 'src/app/models/address-section-data.model';
 export class AddressComponent {
 
   @Input() public addressData!: AddressSectionData;
+  @Output() public elementAddressCreated: EventEmitter<string> = new EventEmitter<string>();
 
+  ngOnInit() {
+    this.elementAddressCreated.emit('address')
+  }
 }

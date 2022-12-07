@@ -1,15 +1,15 @@
 <!-- Navbar -->
-<app-header></app-header>
+<app-header (elementHeaderCreated)="onElementHeaderCreated($event)"></app-header>
 <!-- End Navbar -->
 
 <!-- Main -->
 <main id="main">
   <!-- Carousel -->
-  <app-carrossel></app-carrossel>
+  <app-carrossel (elementCarouselCreated)="onElementCarouselCreated($event)"></app-carrossel>
   <!-- End Carousel -->
 
   <!-- Features -->
-  <app-destaques [featureData]="data.features"></app-destaques>
+  <app-destaques [featureData]="data.features" (elementFeaturesCreated)="onElementFeaturesCreated($event)"></app-destaques>
   <!-- End Features -->
 
   <!-- About -->
@@ -17,11 +17,11 @@
   <!-- End About -->
 
   <!-- Address -->
-  <app-address [addressData]="data.address"></app-address>
+  <app-address [addressData]="data.address" (elementAddressCreated)="onElementAddressCreated($event)"></app-address>
   <!-- End Address -->
 
   <!-- Contact -->
-  <app-contatos (sendForm)="onContactFormSubmitted($event)"></app-contatos>
+  <app-contatos (elementContactCreated)="onElementContactCreated($event)" (sendForm)="onContactFormSubmitted($event)"></app-contatos>
   <!-- End Contact -->
 
   <div class="btn-top">
@@ -34,6 +34,6 @@
 <!-- End Main -->
 
 <!-- Footer -->
-<app-footer></app-footer>
+<app-footer (elementFooterCreated)="onElementFooterCreated($event)"></app-footer>
 <!-- End Footer -->
 <script src="./assets/bootstrap/js/bootstrap.min.js"></script>

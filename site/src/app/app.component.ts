@@ -1,3 +1,4 @@
+import { SearchData } from 'src/app/models/search-data.model';
 import { Component } from '@angular/core';
 import { AppData } from './models/app-data.model';
 import { FormsData } from './models/forms-data.model';
@@ -80,6 +81,10 @@ export class AppComponent {
 
   onContactFormSubmitted(formData: FormsData): void {
     console.log('Formulário enviado com sucesso!', formData);
+  }
+
+  onSearchSubmit(searchedWord: SearchData): void {
+    console.log('Termo pesquisado:', searchedWord);
   }
 
 }

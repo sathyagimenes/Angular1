@@ -20,8 +20,8 @@ export class ContatosComponent {
   }
 
   public submitForm(): void {
-    console.log("Formulário enviado!");
-    console.log(this.formData);
+    // console.log("Formulário enviado!");
+    // console.log(this.formData);
     this.sendForm.emit(this.formData);
   }
 
